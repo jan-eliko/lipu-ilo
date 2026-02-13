@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
         return response.json();
     })
 
-        .then(data => console.log(data))
+        .then(data => dict = data)
         .catch(error => console.error('Error fetching JSON:', error));
     
 
@@ -252,6 +252,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
     selectgroups.addEventListener("change", updateSearch)
     selecttype.addEventListener("change", updateSearch)
 })
+
 
 
 
