@@ -24,7 +24,7 @@ function getSelectValues(select) {
 
 document.addEventListener("DOMContentLoaded", function() { // wait for the doc to load
     
-    const dict = undefined
+    let dict = undefined
 
     fetch('./dict.json').then(response => {
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
         return response.json();
     })
 
-        .then(data => dict = data)
+        .then(data => dict = data; console.log(data); console.log(dict);)
         .catch(error => console.error('Error fetching JSON:', error));
     console.log(dict)
 
@@ -248,6 +248,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
     selectgroups.addEventListener("change", updateSearch)
     selecttype.addEventListener("change", updateSearch)
 })
+
 
 
 
