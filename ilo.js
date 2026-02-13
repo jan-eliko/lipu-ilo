@@ -24,7 +24,7 @@ function getSelectValues(select) {
 
 document.addEventListener("DOMContentLoaded", function() { // wait for the doc to load
     
-    let dict = undefined
+    const dict = undefined
 
     fetch('./dict.json').then(response => {
 
@@ -248,6 +248,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
     selectgroups.addEventListener("change", updateSearch)
     selecttype.addEventListener("change", updateSearch)
 })
+
 
 
 
