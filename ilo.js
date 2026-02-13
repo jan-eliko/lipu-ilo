@@ -1,7 +1,3 @@
-// TODO: 
-// extra features
-// expand definitions
-// MAKE SITE REAL
 // if extra time:
 // clicking definitions should give tokiponized definitions and clicking words should give groups i guess?
 // add 3:"toki pona definition" and 4:{"example usage"} to every definition 
@@ -38,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
 
         .then(data => dict = data)
         .catch(error => console.error('Error fetching JSON:', error));
-    
+    console.log(dict)
 
     let Indexes = {}
     let all = {}
@@ -252,6 +248,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
     selectgroups.addEventListener("change", updateSearch)
     selecttype.addEventListener("change", updateSearch)
 })
+
 
 
 
