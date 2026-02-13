@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
     fetch('./dict.json').then(response => {
 
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-        dict = response.json();
+        return response.json();
     })
 
         .then(data => console.log(data))
@@ -252,3 +252,4 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
     selectgroups.addEventListener("change", updateSearch)
     selecttype.addEventListener("change", updateSearch)
 })
+
