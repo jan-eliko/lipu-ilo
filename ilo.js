@@ -2,6 +2,9 @@
 // extra features
 // expand definitions
 // MAKE SITE REAL
+// if extra time:
+// clicking definitions should give tokiponized definitions and clicking words should give groups i guess?
+// add 3:"toki pona definition" and 4:{"example usage"} to every definition 
 let storage = {}
 
 // outsourced
@@ -24,51 +27,91 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
     
    let dict = {
         "a": {
-            1: "emotion, emphasis, add after the target phrase",
+            1: "emotion, emphasis, add after the target phrase, !",
             2: {
               1:"partical",
-              2:"modifier",
+              2:"modifier"
+            },
+            3:"pilin mute pini toki",
+            4:{
+                1:"my pilin pona tawa toki pona a",
+                2:"I love toki pona!"
             }
         },
         "akesi": {
             1: "lizard or reptile",
             2: {
               1:"biological",
+            },
+            3:"misa kiwen",
+            4:{
+                1:"akesi mi nimi e askesi Pipo",
+                2:"my lizard's name is Pipo"
             }
         },
         "ala": {
             1: "no, nil, void, can invert words when acting as an adverb",
             2: {
               1:"partical",
-              2:"modifier",
+              2:"modifier"
+            },
+            3:"how do I define this mannn", // bad
+            4:{
+                1:"ni li akesi ala",
+                2:"this is not a lizard"
             }
         },
         "alasa": {
-            1: "hunt, try to",
+            1: "hunt, try to, search, pursue",
             2: {
               1:"pre",
+            },
+            3:"tawa ijo",
+            4:{
+                1:"mi alasa soweli la soweli alasa tawa",
+                2:"what I hunt animals, they try to run"
             }
         },
         "ale": {
             1: "all, infinite, countless, hundred, 100",
             2: {
               1:"number",
+            },
+            3:"ala ala, mute mute mute mute mute",
+            4:{
+                1:"jan ale e pona",
+                2:"every person is good"
             }
         },
         "anpa": {
             1: "down, lowly",
             2: {
               1:"positional",
+            },
+            3:"sewi ala", // bad
+            4:{
+                1:"kiwen lon anpa mi",
+                2:"ground is under me"
             }
         },
         "ante": {
             1: "different, other",
-            2: {}
+            2: {},
+            3:"sama ala", // bad
+            4:{
+                1:"mi en sina e ante mute",
+                2:"me and you are very different"
+            }
         },
         "anu": {
             1: "boolean question, add 'anu seme' to make a y/n question",
             2: {
               1:"modifier"
+            },
+            3:"nimi Seme pi lon e ala, seme pi ijo nanpa wan e ijo nanpa tu",
+            4:{
+                1:"sina wile tawa tomo mi anu seme | sina pilin pona tawa loje anu laso",
+                2:"do you want to go to my house?  |         do you prefer red or blue?"
             }
         },
         "awen": {
@@ -76,23 +119,43 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
             2: {
               1:"pre",
               2:"modifier"
+            },
+            3:"lon tenpo mute", // bad
+            4:{
+                1:"tenpo ike la mi awen",
+                2:"what times are tough, I endure"
             }
         },
         "e": {
             1: "direct object bridge partical",
             2: {
               1:"partical"
+            },
+            3:"nimi Li nanpa tu",
+            4:{
+                1:"jan pona li tawa e mi  | mi pilin pona tawa loje e laso",
+                2:"friends follow me      |            i like red and blue"
             }
         },
         "en": {
-            1: "and, but for subjects",
+            1: "and but for subjects",
             2: {
               1:"partical"
+            },
+            3:"nimi E mute pi jan",
+            4:{
+                1:"jan Jon en jan Lisa e jan pona",
+                2:"John and Lisa are friends"
             }
         },
         "esun": {
             1: "market, trade, business",
-            2: {}
+            2: {},
+            3:"mani something", // bad
+            4:{
+                1:"jan pi esun Upele li tawa tomo mi",
+                2:"uber person is coming to my house"
+            }
         },
         "ijo": {
             1: "object, thing, matter, something that exists",
@@ -109,7 +172,8 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
         "insa": {
             1: "inside, stomach",
             2: {
-              1:"biological"
+              1:"biological",
+              2:"positional"
             }
         },
         "jaki": {
@@ -177,7 +241,8 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
         "kijetesantekalu": {
             1: "raccoon",
             2: {
-              1:"biological"
+              1:"biological",
+              2:"strange"
             }
         },
         "kin": {
@@ -273,7 +338,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
             2: {}
         },
         "linja": {
-            1: "line, string, hair, 1 dimensional",
+            1: "line, bendy, string, hair, 1 dimensional",
             2: {
               1:"geometric"
             }
@@ -317,7 +382,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
             }
         },
         "ma": {
-            1: "land, earth, country",
+            1: "land, earth, countr, place",
             2: {}
         },
         "mama": {
@@ -498,12 +563,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
         },
         "pini": {
             1: "end, finish, stop, ended",
-            2: {
-
-
-
-
-            }
+            2: {}
         },
         "pipi": {
             1: "bug, insect",
@@ -633,17 +693,24 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
             1: "movement, to, leave, transportation, from the perspective of, going to, <thing> to <thing>",
             2: {
               1:"pre",
-              2:"modifier"
+              2:"modifier",
+              3:"positional"
             }
         },
         "telo": {
             1: "water, liquid, wash, wet, beverage",
             2: {}
         },
+        "teje": {
+            1: "right, side, starboard",
+            2: {
+              1:"positional"
+            },
+        },
         "tenpo": {
             1: "temporal, time, moment, sitiation, point in time, duration",
             2: {
-              2:"modifier"
+              1:"modifier"
             }
         },
         "toki": {
@@ -696,8 +763,15 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
               1:"biological"
             }
         },
+        "wasoweli": {
+            1: "flying bird mammal",
+            2: {
+              1:"biological",
+              2:"strange"
+            }
+        },
         "wawa": {
-            1: "strong, power, energy, independant, dependable",
+            1: "strong, power, energy, independant, dependable, electric",
             2: {}
         },
         "weka": {
@@ -724,6 +798,12 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
                 1:"biological"
             }
         },
+        "soto": {
+            1: "left, side, port",
+            2: {
+              1:"positional"
+            },
+        },
         "meso": {
             1: "average, mid, medium",
             2: {}
@@ -734,8 +814,30 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
         },
         "kokosila": {
             1: "speak another language when toki pona would be more effective",
+            2: {
+              1:"strange"
+            }
+        },
+        "usawi": {
+            1: "magic, spell, wizard, supernatural, sorcer, enchant",
             2: {}
-        }
+        },
+        "ojuta": {
+            1: "o uta 'deez nuts'",
+            2: {
+              1:"strange"
+            }
+        },
+        "misa": {
+            1: "rat, mouse, rodent, small land creature",
+            2: {}
+        },
+        "********": {
+            1: "use one or more of the banned syllables, **, **, **, or **",
+            2: {
+              1:"strange"
+            }
+        },
     }
 
     let Indexes = {}
@@ -820,14 +922,23 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
 
             // group matching (ouch)
             let gcheck = 0
-            for (const g of gfilter) { // for group filters
-                for (const groupinthing of entry[2]) { // for groups in thing
-                    if (g == groupinthing) { // if a match
-                        //console.log(gfilter[g],"match in",key)
-                        gcheck++
+            if (entry[2] && entry[2] != undefined) {
+                for (const g of gfilter) { // for group filters
+                    try {
+                        for (const groupinthing in entry[2]) { // for groups in thing
+                        console.log(entry[2])
+                            if (g == entry[2][groupinthing]) { // if a match
+                                //console.log(gfilter[g],"match in",key)
+                                gcheck++
+                            }
+                        }
+                    } catch (error) {
+                        console.error(error)
                     }
+                    
                 }
             }
+            
             // if group check failed
             if (gcheck != gfilter.length) {
                 results[key] = false
