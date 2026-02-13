@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
     
     let dict = undefined
 
-    fetch('./dict.json').then(response => {
+    fetch('http://jan-eliko.github.io/lipu-ilo/dict.json').then(response => {
 
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         return response.json();
@@ -252,4 +252,5 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
     selectgroups.addEventListener("change", updateSearch)
     selecttype.addEventListener("change", updateSearch)
 })
+
 
