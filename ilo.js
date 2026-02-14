@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
 
         console.log(dict);
     })();
+    console.log(dict);
 
     let Indexes = {}
     let all = {}
@@ -250,6 +251,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
     selectgroups.addEventListener("change", updateSearch)
     selecttype.addEventListener("change", updateSearch)
 })
+
 
 
 
