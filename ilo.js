@@ -24,15 +24,19 @@ function getSelectValues(select) {
 
 document.addEventListener("DOMContentLoaded", function() { // wait for the doc to load
     
-    let dict = fetch('./dict.json').then(response => {
+    // ahhhhhh im scared
+    let dict;
 
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-        return response.json();
-    })
+    (async () => {
+        const response = await fetch('./dict.json');
 
-        .then(data => {return data["PromiseResult"]})
-        .catch(error => console.error('Error fetching JSON:', error));
-    console.log(dict)
+        if (!response.ok)
+            throw new Error(`HTTP error! Status: ${response.status}`);
+
+        dict = await response.json();
+
+        console.log(dict);
+    })();
 
     let Indexes = {}
     let all = {}
@@ -246,6 +250,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
     selectgroups.addEventListener("change", updateSearch)
     selecttype.addEventListener("change", updateSearch)
 })
+
 
 
 
