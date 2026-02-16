@@ -838,8 +838,15 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
               1:"strange"
             }
         },
-    }
-
+   }
+    function updateEvents(key) {
+        document.getElementById(key).childNodes[0].childNodes[0].addEventListener("click", function() {
+            selecttype.selectedIndex = 2
+        })
+        document.getElementById(key).childNodes[1].childNodes[0].addEventListener("click", function() {
+            selecttype.selectedIndex = 1
+        })
+    } 
     let Indexes = {}
     let all = {}
 
@@ -881,28 +888,10 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
         Indexes[index] = key
         all[key] = row
         // temporary way to filter out results, used for testing
-        label.addEventListener("click", function() {
-            selecttype.selectedIndex = 2
-        })
-        definition.addEventListener("click", function() {
-            selecttype.selectedIndex = 1
-        })
+        updateEvents(key)
     }
 
-    document.getElementById("refresh").addEventListener("click", function() {
-        // empty storage
-        if (!storage.length) {return}
-        for (const key in storage) {
-            if (!storage[key]) {
-                continue
-            }
-            //console.log(key,storage)
-            const element = storage[key]
-            page.appendChild(element)
-            storage[key] = null
-        }
-        selectgroups.options.selectedIndex = -1
-    })
+    
 
     // event for whenever you type anything
     function updateSearch() {
@@ -926,7 +915,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
                 for (const g of gfilter) { // for group filters
                     try {
                         for (const groupinthing in entry[2]) { // for groups in thing
-                        console.log(entry[2])
+                        //console.log(entry[2])
                             if (g == entry[2][groupinthing]) { // if a match
                                 //console.log(gfilter[g],"match in",key)
                                 gcheck++
@@ -1000,6 +989,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
                     element.remove() // clean
                     page.appendChild(newclone) // implement clone
                     newclone.id = key
+                    updateEvents(key)
                 }
                 results[key] = "perfect"
 
@@ -1040,6 +1030,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
                 element.remove() // clean
                 page.appendChild(newclone) // implement clone
                 newclone.id = key
+                updateEvents(key)
             }
 
             if (element.childNodes[1] && document.getElementById(key)) {
@@ -1049,6 +1040,14 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
         }
     }
     document.getElementById("searchbox").addEventListener("keyup", updateSearch)
+    
     selectgroups.addEventListener("change", updateSearch)
     selecttype.addEventListener("change", updateSearch)
+    
+    document.getElementById("refresh").addEventListener("click", function() {
+        selectgroups.options.selectedIndex = -1
+        document.getElementById("searchbox").value = "" // reset input
+        updateSearch() // reset search
+    })
 })
+
