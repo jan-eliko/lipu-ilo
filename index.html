@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet", href="lukin.css">
-    <script defer src="./ilo.js"></script>
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" ,="" href="lukin.css">
+  </head>
+  <body>
     <h1>lipu ilo pi toki pona</h1>
+    <h3>Interactive toki pona dictionary</h3>
     <p>click on a word to search for word name, click on a definition to search in definitions</p>
     <table class="selectors">
-            <tr>
-                <td>
-                    search by
-                </td>
-                <td>
-                    group by
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <select id="selectsearchtype">
-                        <option>both</option>
-                        <option>definition</option>
-                        <option>word</option>
-                    </select>
-                </td> 
-                <td>
-                    <select id="selectgroups" multiple size="1">
-                        <option>color</option>
-                        <option>number</option>
-                        <option>pre</option>
-                        <option>partical</option>
-                        <option>modifier</option>
-                        <option>positional</option>
-                        <option>biological</option>
-                        <option>strange</option>
-                    </select>
-                </td> 
-            </tr>
-        </table>
-        
-        
+      <tbody><tr>
+        <td>
+          search in:
+        </td>
+        <td>
+          if in groups:
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <select id="selectsearchtype">
+            <option>both</option>
+            <option>definition</option>
+            <option>word</option>
+          </select>
+        </td> 
+        <td>
+          <select id="selectgroups" multiple="" size="1">
+            <option>color</option>
+            <option>number</option>
+            <option>pre</option>
+            <option>partical</option>
+            <option>modifier</option>
+            <option>positional</option>
+            <option>biological</option>
+            <option>strange</option>
+          </select>
+        </td> 
+      </tr>
+    </tbody></table>
+
+
     <br>
+    <h3>search here</h3>
     <textarea id="searchbox"></textarea>
     <br>
     <button id="refresh">Refresh</button>
@@ -243,5 +244,5 @@
     <br>
     <br>
     <p>you can also use this <a href="https://en.wikipedia.org/wiki/List_of_Toki_Pona_words">wikipedia page</a> that has a list of words and meanings, along with symbols for them </p>
-</body>
+  </body>
 </html>
