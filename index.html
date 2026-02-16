@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" ,="" href="lukin.css">
+    <script defer src="./ilo.js"></script>
   </head>
   <body>
     <h1>lipu ilo pi toki pona</h1>
@@ -10,39 +11,40 @@
     <table class="selectors">
       <tbody><tr>
         <td>
-          search in:
+          <h4>search for:</h4>
         </td>
+        <td>ㅤㅤ</td>
         <td>
-          if in groups:
+          <h4>in groups:</h4>
         </td>
-      </tr>
-      <tr>
-        <td>
-          <select id="selectsearchtype">
-            <option>both</option>
-            <option>definition</option>
-            <option>word</option>
-          </select>
-        </td> 
-        <td>
-          <select id="selectgroups" multiple="" size="1">
-            <option>color</option>
-            <option>number</option>
-            <option>pre</option>
-            <option>partical</option>
-            <option>modifier</option>
-            <option>positional</option>
-            <option>biological</option>
-            <option>strange</option>
-          </select>
-        </td> 
-      </tr>
-    </tbody></table>
+        </tr>
+        <tr>
+          <td>
+            <select id="selectsearchtype">
+              <option>both</option>
+              <option>definition</option>
+              <option>word</option>
+            </select>
+          </td> 
+          <td></td>
+          <td>
+            <select id="selectgroups" multiple="" size="1">
+              <option>color</option>
+              <option>number</option>
+              <option>pre</option>
+              <option>partical</option>
+              <option>modifier</option>
+              <option>positional</option>
+              <option>biological</option>
+              <option>strange</option>
+            </select>
+          </td> 
+        </tr>
+      </tbody></table>
 
 
     <br>
-    <h3>search here</h3>
-    <textarea id="searchbox"></textarea>
+    <textarea placeholder="type here to search" id="searchbox"></textarea>
     <br>
     <button id="refresh">Refresh</button>
     <br>
