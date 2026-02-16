@@ -54,11 +54,13 @@ button {
   width: 150px;
   height: 39px;
   color: rgb(206, 206, 206);
+  font-size: 16px;
 }
 .meaning {
   font-weight:lighter;
   width: 1000px;
   height: 39px;
   color: rgb(206, 206, 206);
+  font-size: 16px;
 }
 
