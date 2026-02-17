@@ -57,13 +57,23 @@ button {
   color: rgb(206, 206, 206);
   font-size: 16px;
 }
-.meaning {
+@media (min-width: 769px) {
+  .meaning {
   font-weight:lighter;
   width: 700px;
   height: 39px;
   color: rgb(206, 206, 206);
   font-size: 16px;
 }
-
+}
+@media (max-width: 768px) {
+  .meaning {
+  font-weight:bold;
+  width: 700px;
+  height: 39px;
+  color: rgb(206, 206, 206);
+  font-size: 16px;
+}
+}
 
 
