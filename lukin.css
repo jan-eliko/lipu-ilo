@@ -122,13 +122,14 @@ button {
   width: 150px;
   height: 80px;
   color: rgb(236, 236, 236);
-  font-size: 48px;
+  font-size: 32px;
 }
 .meaning {
   font-weight:bold;
   width: 700px;
   height: 80px;
   color: rgb(236, 236, 236);
-  font-size: 48px;
+  font-size: 32px;
 }
 }
+
