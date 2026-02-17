@@ -67,70 +67,71 @@
 }
 @media (max-width: 768px) {
   body {
-  justify-items: center;
-  text-align: center;
-  background-color: rgb(0, 0, 0);
+    justify-items: center;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+  }
+  h1 {
+    font-size: 36px;
+    color: rgb(206, 206, 206);
+  }
+  h3 {
+    color: rgb(169, 169, 169);
+    font-weight: 1;
+    font-size: 24px
+  }
+  h4 {
+    color: rgb(172, 172, 172);
+    font-weight: 1;
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  tbody {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  p {
+    font-weight: normal;
+    font-size: 18px;
+    color: rgb(206, 206, 206);
+  }
+  textarea {
+    resize: none;
+  }
+  table {
+    border-style: solid;
+    border-color: black;
+    border-radius: 1px;
+    flex: content;
+    justify-items: center;
+    text-align: center;
+    color: rgb(206, 206, 206);
+  }
+  td {
+    height: 39px;
+  }
+  button {
+    background-color: rgb(51, 51, 51);
+  }
+  .selectors {
+    border-style: none;
+    flex: content;
+  }
+  .word {
+    font-weight:bolder;
+    width: 60px;
+    height: 16px;
+    color: rgb(236, 236, 236);
+    font-size: 32px;
+  }
+  .meaning {
+    font-weight:bold;
+    width: 280px;
+    height: 16px;
+    color: rgb(236, 236, 236);
+    font-size: 32px;
+  }
 }
-h1 {
-  font-size: 36px;
-  color: rgb(206, 206, 206);
-}
-h3 {
-  color: rgb(169, 169, 169);
-  font-weight: 1;
-  font-size: 24px
-}
-h4 {
-  color: rgb(172, 172, 172);
-  font-weight: 1;
-  font-size: 16px;
-  margin-bottom: 2px;
-}
-tbody {
-  font-size: 20px;
-  font-weight: normal;
-}
-p {
-  font-weight: normal;
-  font-size: 18px;
-  color: rgb(206, 206, 206);
-}
-textarea {
-  resize: none;
-}
-table {
-  border-style: solid;
-  border-color: black;
-  border-radius: 1px;
-  flex: content;
-  justify-items: center;
-  text-align: center;
-  color: rgb(206, 206, 206);
-}
-td {
-  height: 39px;
-}
-button {
-  background-color: rgb(51, 51, 51);
-}
-.selectors {
-  border-style: none;
-  flex: content;
-}
-.word {
-  font-weight:bolder;
-  width: 150px;
-  height: 80px;
-  color: rgb(236, 236, 236);
-  font-size: 32px;
-}
-.meaning {
-  font-weight:bold;
-  width: 700px;
-  height: 80px;
-  color: rgb(236, 236, 236);
-  font-size: 32px;
-}
-}
+
 
 
