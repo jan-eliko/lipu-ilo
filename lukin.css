@@ -72,14 +72,8 @@ button {
     width: 100%;
     max-width: 700px;
     height: 39px;
-    color: rgb(206, 206, 206);
+    color: rgb(206, 206, 206); /* PLEASE STOP BEING BLUE */
     font-size: 16px;
     box-sizing: border-box;
   }
 }
-
-
-
-
-
-
