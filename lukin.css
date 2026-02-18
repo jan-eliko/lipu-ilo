@@ -68,13 +68,16 @@ button {
 
 @media (max-width: 768px) {
   .meaning {
-  font-weight:bold;
-  width: 700px;
-  height: 39px;
-  color: rgb(0, 206, 206);
-  font-size: 16px;
+    font-weight: bold;
+    width: 100%;              /* Use percentage for responsiveness */
+    max-width: 700px;         /* Prevent it from exceeding 700px */
+    height: 39px;
+    color: rgb(0, 206, 206);
+    font-size: 16px;
+    box-sizing: border-box;   /* Ensures padding/border don't overflow */
+  }
 }
-}
+
 
 
 
