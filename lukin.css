@@ -54,6 +54,7 @@ button {
 .selectors {
   border-style: none;
   flex: content;
+  width: 51%;
 }
 .word {
   font-weight:bolder;
@@ -90,5 +91,6 @@ button {
     box-sizing: border-box;
   }
 }
+
 
 
