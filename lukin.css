@@ -78,7 +78,7 @@ button {
     font-weight: bold;
     width: 100%;
     max-width: 700px;
-    height: 39px;
+    height: 43px;
     color: rgb(206, 206, 206);
     font-size: 20px;
     box-sizing: border-box;
@@ -86,12 +86,13 @@ button {
   .word {
     font-weight:bolder;
     width: 150px;
-    height: 39px;
+    height: 43px;
     color: rgb(206, 206, 206);
     font-size: 20px;
     box-sizing: border-box;
   }
 }
+
 
 
 
