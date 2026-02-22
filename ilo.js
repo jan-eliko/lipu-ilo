@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
             }
         },
         "anpa": {
-            1: "down, lowly",
+            1: "down, lowly, below, under",
             2: {
               1:"positional",
             },
@@ -1050,4 +1050,5 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
         updateSearch() // reset search
     })
 })
+
 
