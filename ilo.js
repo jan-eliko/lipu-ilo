@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
             }
         },
         "kili": {
-            1: "fruit, vegetable, edible plant ",
+            1: "fruit, vegetable, edible plant",
             2: {
               1:"biological"
             }
@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
             2: {}
         },
         "kiwen": {
-            1: "hard, solid, stone",
+            1: "hard, solid, stone, rock, mineral",
             2: {}
         },
         "ko": {
@@ -1050,5 +1050,6 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
         updateSearch() // reset search
     })
 })
+
 
 
