@@ -819,7 +819,7 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
             }
         },
         "usawi": {
-            1: "magic, spell, wizard, supernatural, sorcer, enchant",
+            1: "magic, spell, wizard, supernatural, sorcerer, enchant",
             2: {}
         },
         "ojuta": {
@@ -832,8 +832,8 @@ document.addEventListener("DOMContentLoaded", function() { // wait for the doc t
             1: "rat, mouse, rodent, small land creature",
             2: {}
         },
-        "********": {
-            1: "use one or more of the banned syllables, **, **, **, or **",
+        "wuwojiti": {
+            1: "use one or more of the banned syllables, wu, wo, ji, or ti",
             2: {
               1:"strange"
             }
